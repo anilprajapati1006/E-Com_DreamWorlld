@@ -1,0 +1,65 @@
+<div class="centerContainer">
+    {{#if hasError}}
+    {{#each messages}}
+    <div class="alert alert-danger">{{this}}</div>
+    {{/each}}
+    {{/if}}
+</div>
+{{!-- <div class="centerContainer FormCSS">
+    <div class="row">
+        <form method="post">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <input placeholder="Enter Your Name" type="text" name="name" id="name">
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <input placeholder="Enter Email Address" type="text" name="email" id="email">
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <input placeholder="Enter Password" type="password" name="password" id="password">
+            </div>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <div class="col-sm-12 col-md-12 col-lg-12 centerContainer">
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="centerContainer">
+    <p>Already Have an Account <a href="/users/signin">Sign In Instead!</a></p>
+</div> --}}
+
+<section class="signUp">
+    <div class="container">
+        <div class="row valign-wrapper">
+            <div class="col l6 m6 hide-on-small-only">
+                <div class="signUp-img">
+                    <img class="responsive-img" src="/images/SignUp.svg">
+                </div>
+            </div>
+            <div class="col l6 m6 s12">
+                <div class="signUp-form center">
+                    <h3>SIGN UP</h3>
+                    <form method="post">
+                        <div class="input-field col s12 center">
+                            {{!-- Name --}}
+                            <input placeholder="Enter Your Name" type="text" name="name" id="name">
+                            {{!-- Email --}}
+                            <input placeholder="Enter Email Address" type="text" name="email" id="email">
+                            {{!-- Password --}}
+                            <input placeholder="Enter Password" type="password" name="password" id="password">
+                            {{!-- csrfToken --}}
+                            {{!-- <input type="hidden" name="_csrf" value="{{csrfToken}}"> --}}
+                            {{!-- SignUp Button --}}
+                            <button type="submit" class="btn btn-large center">Sign Up</button>
+                        </div>
+                    </form>
+                    <div class="center">
+                        <p>Already Have an Account <a href="/users/signin">Sign In Instead!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

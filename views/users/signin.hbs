@@ -1,0 +1,69 @@
+<div class="centerContainer">
+    {{#if hasError}}
+    {{#each messages}}
+    <div class="alert alert-danger">{{this}}</div>
+    {{/each}}
+    {{/if}}
+</div>
+{{!-- <div class="centerContainer FormCSS">
+    <div class="row">
+        <form method="post">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <input placeholder="Enter Email Address" type="text" name="email" id="email">
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <input placeholder="Enter Password" type="password" name="password" id="password">
+            </div>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <div class="col-sm-12 col-md-12 col-lg-12 centerContainer">
+                <button type="submit" class="btn btn-primary">Sign In</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="centerContainer">
+    <p>Don't Have an Account ?? <a href="/users/signup">Sign up Instead!</a></p>
+</div> --}}
+
+{{!-- Sign In --}}
+<section class="signIn">
+    <div class="container">
+        <div class="row valign-wrapper">
+            <div class="col l6 m6 hide-on-small-only">
+                <div class="signIn-img">
+                    <img class="responsive-img" src="/images/Login.svg">
+                </div>
+            </div>
+            <div class="col l6 m6 s12">
+                <div class="signIn-form">
+                    <h3 class="center">SIGN IN</h3>
+                    <form method="post">
+                        <div class="input-field col s12 center">
+                            {{!-- Email --}}
+                            <input placeholder="Enter Email Address" type="text" name="email" id="email">
+                            {{!-- Password --}}
+                            <input placeholder="Enter Password" type="password" name="password" id="password">
+                            {{!-- Forgot Password --}}
+                            <a href="#" class="forgot-password right">Forgot Password ?</a>
+                            {{!-- Remember Me --}}
+                            <span class="left">
+                                <label>
+                                    <input type="checkbox" class="filled-in" />
+                                    <span>Remember Me</span>
+                                </label>
+                            </span>
+                            {{!-- csrfToken --}}
+                            {{!-- <input type="hidden" name="_csrf" value="{{csrfToken}}"> --}}
+                            {{!-- SignIn Button --}}
+                            <button type="submit" class="btn btn-large center">Sign In</button>        
+                        </div>
+                        <div class="center">
+                            <p>Don't Have an Account ?? <a href="/users/signup">Sign up Instead!</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

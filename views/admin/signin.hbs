@@ -1,0 +1,70 @@
+{{!-- <div class="centerContainer">
+    <img class="img-fluid" src="/images/Logn.svg">
+    <br>
+</div>
+<br> --}}
+<div class="centerContainer">
+    {{#if hasError}}
+    {{#each messages}}
+    <div class="alert alert-danger">{{this}}</div>
+    {{/each}}
+    {{/if}}
+</div>
+{{!-- Sign In --}}
+<section class="signIn">
+    <div class="container">
+        <div class="row valign-wrapper">
+            <div class="col l6 m6 hide-on-small-only">
+                <div class="signIn-img">
+                    <img class="responsive-img" src="/images/Login.svg">
+                </div>
+            </div>
+            <div class="col l6 m6 s12">
+                <div class="signIn-form">
+                    <h3 class="center">SIGN IN</h3>
+                    <form method="post">
+                        <div class="input-field col s12 center">
+                            {{!-- ID --}}
+                            <input required placeholder="Enter Seller ID" type="text" name="aid" id="aid">
+                            {{!-- Password --}}
+                            <input required placeholder="Enter Password" type="password" name="password" id="password">
+                            {{!-- csrfToken --}}
+                            {{!-- <input type="hidden" name="_csrf" value="{{csrfToken}}"> --}}
+                            {{!-- SignIn Button --}}
+                            <button type="submit" class="btn btn-large center">Sign In</button>
+                        </div>
+                    </form>
+                    <div class="center">
+                        <p>Don't Have an Account ?? <a href="/adminSignup">Sign up Instead!</a></p>
+                        <p>Not a Seller <a href="/">Go to Customer Portal</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{!-- <div class="centerContainer FormCSS">
+    <div class="row">
+        <form method="post">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <input placeholder="Enter Seller ID" type="text" name="aid" id="aid">
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <input placeholder="Enter Password" type="password" name="password" id="password">
+            </div>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <div class="col-sm-12 col-md-12 col-lg-12 centerContainer">
+                <button type="submit" class="btn btn-primary">Sign In</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="left">
+        <p>Don't Have an Account ?? <a href="/adminSignup">Sign up Instead!</a></p>
+    </div>
+    <div class="right">
+        <p>Not a Seller <a href="/">Go to Customer Portal</a></p>
+    </div>
+</div> --}}

@@ -1,0 +1,89 @@
+<!-- Product-View -->
+<section class="product-view">
+  <div class="container">
+    <div class="row">
+      <div class="col l5 m5 s12">
+        <div class="product-img">
+          <img src="{{product.imagePath}}" alt="Product" class="responsive-img">
+          <div class="action">
+            <div class="row">
+              <div class="col l6 m6 s12">
+                <a href="/add-to-cart/{{product._id}}"><button class="btn btn-large">Add to Cart</button></a>
+              </div>
+              <div class="col l6 m6 s12">
+                <a href="/buy-now-add-to-cart/{{product._id}}"><button class="btn btn-large">Buy Now</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col l7 m7 s12">
+        <div class="product-name">
+          <h5> {{product.name}} </h5>
+        </div>
+        <div class="product-price">
+          {{!-- <span class="offer"><strike>₹1295</strike> 15% off</span> --}}
+          <p>₹ {{product.price}}</p>
+        </div>
+        <div class="product-offer">
+          <h6>Available offers</h6>
+          <p class="offers">
+            Bank Offer10% Instant Discount on HSBC Credit Cards and EMI Transactions <a href="#">T&C</a>
+            <br>
+            Bank Offer10% Instant Discount on Federal Bank Debit Cards <a href="#">T&C</a>
+            <br>
+            Bank Offer10% off* with Axis Bank Buzz Credit Card <a href="#">T&C</a>
+            <br>
+            Bank Offer 5% Cashback on Flipkart Axis Bank Credit Card <a href="#">T&C</a>
+          </p>
+        </div>
+        <div class="details">
+          <h6>Delivery</h6>
+          <p> Usually delivered in 7-8 days</p>
+
+          <h6>Services</h6>
+          <p> 1 Year from the date of purchase |
+            10 Days Replacement Policy? |
+            Cash on Delivery available?</p>
+
+          {{!-- <h6>Seller</h6>
+          <p> SuperComNet4 | 10 Days Replacement Policy?</p> --}}
+
+          <h6>Description</h6>
+          <p> {{product.desc}} </p>
+          {{!-- 
+          <div>
+            <h4>Specification</h4>
+            <h5>General</h5>
+            <p>Model Name : Rockerz 450 <br>
+              Color : Luscious Black <br>
+              Headphone Type : On the Ear <br>
+              Inline Remote : Yes <br>
+              Sales Package : Headphone, User Manual, Charging Cable <br>
+              Connectivity : Bluetooth
+            </p>
+            <h5>Product Details</h5>
+            <p>Foldable/Collapsible : Yes <br>
+              Deep Bass : Yes <br>
+              Water Resistant : No <br>
+              Designed For : Android, iOS <br>
+              With Microphone : Yes
+            </p>
+
+            <h5>Warranty</h5>
+            <p>Domestic Warranty : 1 Year <br>
+              Warranty Summary : 1 Year from the date of purchase <br>
+              Warranty Service Type : Repair or Replacement <br>
+              Covered in Warranty : Manufacturing Defects <br>
+              Not Covered in Warranty : Accidental and Liquid Damages
+            </p>
+          </div>
+          <div class="rating-reviews">
+
+          </div> --}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

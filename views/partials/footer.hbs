@@ -1,0 +1,39 @@
+{{!-- Footer --}}
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 m6 s12">
+                <!-- Form -->
+                <form class="col s12" method="POST" action="/subscribe">
+                    <div class="input-field col s12">
+                        {{!-- Name --}}
+                        <input id="icon_prefix" type="text" class="validate" width="100%" name="subName" placeholder="Enter Your Name..." required>
+                        {{!-- Email --}}
+                        <input id="icon_prefix" type="text" class="validate" name="subEmail" placeholder="Enter Your Email..." required>
+                        {{!-- Subscribe Button --}}
+                        <button class="btn btn-large subscribe-btn" type="submit">Subscribe Us</button>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="col l6 m6 s12">
+                <form class="col s12" method="GET" action="/search">
+                    <div class="row search">
+                        <div class="input-field col s12">
+                            {{!-- Search --}}
+                            <input id="icon_prefix" type="text" class="validate" name="search" placeholder="Search here...">
+                            {{!-- Search Button --}}
+                            <button type="submit" class="btn btn-large search-btn">SEARCH</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2020 Copyright
+            <a href="/" class="brand-logo right"><span class="stroke-text"><span style="font-size: 1.4rem;">D</span>REAM</span><span style="font-size: 1.4rem;">W</span>ORLD - A Hope Of Happiness</a>
+        </div>
+    </div>
+</footer>

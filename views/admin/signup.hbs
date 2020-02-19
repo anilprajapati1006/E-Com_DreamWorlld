@@ -1,0 +1,44 @@
+{{!-- Error Handling --}}
+<div class="centerContainer">
+    {{#if hasError}}
+    {{#each messages}}
+    <div class="alert alert-danger">{{this}}</div>
+    {{/each}}
+    {{/if}}
+</div>
+
+{{!-- Seller Sign Up --}}
+<section class="signUp">
+    <div class="container">
+        <div class="row valign-wrapper">
+            <div class="col l6 m6 hide-on-small-only">
+                <div class="signUp-img">
+                    <img class="responsive-img" src="/images/SignUp.svg">
+                </div>
+            </div>
+            <div class="col l6 m6 s12">
+                <div class="signUp-form center">
+                    <h3>SIGN UP</h3>
+                    <form method="post" action="/sellersignup">
+                        <div class="input-field col s12 center">
+                            {{!-- ID --}}
+                            <input required placeholder="Enter Admin ID..." type="text" name="aid" id="aid">
+                            {{!-- Name --}}
+                            <input required placeholder="Enter Admin Name..." type="text" name="name" id="name">
+                            {{!-- Password --}}
+                            <input required placeholder="Enter Password" type="password" name="password" id="password">
+                            {{!-- csrfToken --}}
+                            {{!-- <input type="hidden" name="_csrf" value="{{csrfToken}}"> --}}
+                            {{!-- SignUp Button --}}
+                            <button type="submit" class="btn btn-large center">Sign Up</button>
+                        </div>
+                    </form>
+                    <div class="center">
+                        <p>Already Have an Account ?? <a href="/admin"> &nbsp;Sign in Instead!</a></p>
+                        <p>Not a Seller <a href="/">Go to Customer Portal</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

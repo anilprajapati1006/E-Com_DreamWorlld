@@ -1,0 +1,139 @@
+{{#if adminLogin }}
+<header>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo"><span class="stroke-text"><span style="font-size: 2rem;">D</span>REAM</span><span
+          style="font-size: 2rem;">W</span>ORLD</a>
+
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href='/admin'>
+            <i class="fas fa-sign-out-alt"></i>&nbsp; Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<ul id="slide-out" class="sidenav sidenav-fixed">
+  <li>
+    <div style="padding: 20px; align: center; font-weight: 900;"> Seller Panel </div>
+  </li>
+  <li style="background-color:#ff7500;">
+    <a class="waves-effect waves-light" id="pills-add-tab" href="#addProduct"><i class="fas fa-pen"></i> &nbsp; Add
+      New Product</a>
+  </li>
+  <li style="background-color: #3a3e4e;">
+    <a class="waves-effect waves-light" id="pills-update-tab" href="#updateProduct"><i class="fas fa-edit"></i>
+      &nbsp; Update Product</a>
+  </li>
+  <li style="background-color:#ff7500;">
+    <a class="waves-effect waves-light" id="pills-delete-tab" href="#deleteProduct"><i class="fas fa-trash-alt"></i>
+      &nbsp; Delete Product</a>
+  </li>
+  <li style="background-color: #3a3e4e;">
+    <a class="waves-effect waves-light" id="pills-order-tab" href="#allorders"><i class="fas fa-table"></i> &nbsp;
+      All Orders</a>
+  </li>
+</ul>
+{{else if adminSignInAndUp}}
+<nav>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo"><span class="stroke-text"><span style="font-size: 2rem;">D</span>REAM</span><span
+        style="font-size: 2rem;">W</span>ORLD</a>
+
+    <a href="#" data-target="signinandup" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li>
+        <a href='/admin'>
+          <i class="fas fa-sign-in-alt"></i>&nbsp; Seller Signin
+        </a>
+      </li>
+      <li>
+        <a href='/adminSignup'>
+          <i class="fas fa-user-plus"></i>&nbsp; Seller Signup
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<ul id="signinandup" class="sidenav">
+  <li>
+    <div style="padding: 20px; align: center; font-weight: 900;"> Welcome To DreamWorld </div>
+  </li>
+  <li style="background-color:#ff7500;">
+    <a href='/admin'>
+      <i class="fas fa-sign-in-alt"></i>&nbsp; Seller Signin
+    </a>
+  </li>
+  <li style="background-color: #3a3e4e;">
+    <a href='/adminSignup'>
+      <i class="fas fa-user-plus"></i>&nbsp; Seller Signup
+    </a>
+  </li>
+</ul>
+{{else}}
+{{!-- Navbar --}}
+<nav>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo"><span class="stroke-text"><span style="font-size: 2rem;">D</span>REAM</span><span
+        style="font-size: 2rem;">W</span>ORLD</a>
+
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li>
+        <a href="/shopping-cart">
+          <span class="badge">{{session.cart.totalQty}}</span>
+          <i class="fas fa-shopping-cart"></i>&nbsp; Shopping Cart
+        </a>
+      </li>
+      <li>
+        <!-- Dropdown Trigger -->
+        <a class='dropdown-trigger' href='#' data-target='dropdown1'>
+          <i class="fas fa-user"></i>&nbsp; User Management
+        </a>
+
+        <!-- Dropdown Structure -->
+        <ul id='dropdown1' class='dropdown-content'>
+          {{#if login}}
+          <li> <a href="/users/profile">User Account</a></li>
+          <li class="divider" tabindex="-1"></li>
+          <li><a href="/users/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          {{else}}
+          <li><a href="/users/signup"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+          <li class="divider" tabindex="-1"></li>
+          <li><a href="/users/signin"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+          {{/if}}
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+  <li>
+    <a style="background-color:#ff7500;" href="/shopping-cart">
+      <i class="fas fa-shopping-cart"></i>&nbsp; Shopping Cart
+      <span class="badge">{{session.cart.totalQty}}</span>
+    </a>
+  </li>
+  <li>
+    <!-- Dropdown Trigger -->
+    <a style="background-color: #3a3e4e;" class='dropdown-trigger' href='#' data-target='dropdown2'>
+      <i class="fas fa-user"></i>&nbsp; User Management
+    </a>
+
+    <!-- Dropdown Structure -->
+  <li id='dropdown2' class='dropdown-content'>
+    {{#if login}}
+    <a style="background-color:#ff7500;" href="/users/profile">User Account</a>
+    <a style="background-color: #3a3e4e;" href="/users/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    {{else}}
+    <a style="background-color:#ff7500;" href="/users/signup"><i class="fas fa-user-plus"></i> Sign Up</a>
+    <a style="background-color: #3a3e4e;" href="/users/signin"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+    {{/if}}
+  </li>
+  </li>
+</ul>
+{{/if }}
